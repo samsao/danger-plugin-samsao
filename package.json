@@ -1,0 +1,53 @@
+{
+  "name": "danger-plugin-samsao",
+  "description": "Samsao Danger plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ptessier/danger-plugin-samsao.git"
+  },
+  "version": "0.0.1-beta",
+  "license": "MIT",
+  "keywords": [
+    "danger",
+    "danger-plugin"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "run-s -s lint:ts lint:tslint lint:prettier",
+    "lint:ts": "tsc --noEmit --skipLibCheck",
+    "lint:tslint": "tslint -e 'node_modules/**' --project tsconfig.json",
+    "lint:prettier": "prettier-check --ignore-path .prettierignore '**/*.{js,jsx,json,md,ts,tsx}'",
+    "lint:prettier-write": "prettier --write --ignore-path .prettierignore '**/*.{js,jsx,json,md,ts,tsx}'"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.3",
+    "@types/node": "^10.5.1",
+    "danger": "*",
+    "jest": "^23.2.0",
+    "prettier": "^1.13.6",
+    "prettier-check": "^2.0.0",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^2.9.2",
+    "yarn-run-all": "^3.1.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(.spec)\\.(ts|tsx)$",
+    "testPathIgnorePatterns": [
+      "\\.snap$",
+      "<rootDir>/node_modules/"
+    ]
+  }
+}

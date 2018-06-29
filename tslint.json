@@ -1,0 +1,30 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["build/**", "coverage/**", "node_modules/**"]
+  },
+  "rules": {
+    // FIXME: Remove this disable
+    "ban-types": false,
+
+    // FIXME: Re-enable when VSCode organize imports stops removing those used only via property shorthand
+    "object-literal-shorthand": false,
+
+    // Style
+    "array-type": false,
+    "curly": false,
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+
+    "max-classes-per-file": false,
+    "member-access": false,
+    "triple-equals": [true, "allow-null-check", "allow-undefined-check"]
+  },
+  "jsRules": {
+    // Style
+    "curly": false,
+    "object-literal-sort-keys": false
+  }
+}

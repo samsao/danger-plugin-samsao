@@ -1,0 +1,21 @@
+language: node_js
+
+branches:
+  only:
+    - master
+    - develop
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+notifications:
+  email: false
+
+node_js:
+  - node
+
+script:
+  - yarn danger ci
+  - yarn lint

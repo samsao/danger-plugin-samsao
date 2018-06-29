@@ -1,0 +1,31 @@
+# Build
+build/
+dist/
+modules/frontend/web/public
+
+## Coverage
+coverage/
+
+## Editor
+.editorconfig
+
+## Flow
+flow-typed
+
+## Git
+.git
+.gitignore
+
+## Prettier
+.prettierignore
+
+# NPM
+package-lock.json
+
+## VSCode
+.vscode
+jsconfig.json
+
+## Yarn
+package.json
+yarn.lock
