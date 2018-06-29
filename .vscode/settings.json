@@ -1,0 +1,15 @@
+{
+  "javascript.validate.enable": true,
+
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+
+  "tslint.enable": true,
+  "tslint.packageManager": "yarn",
+  "tslint.run": "onSave"
+}
