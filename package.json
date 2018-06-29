@@ -14,8 +14,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "local": "DANGER_GITHUB_API_TOKEN=$DANGER_GITHUB_API_TOKEN yarn danger local",
     "build": "tsc",
     "test": "jest",
+    "test:ci": "jest --outputFile reports/jest.json --json",
     "lint": "run-s -s lint:ts lint:tslint lint:prettier",
     "lint:ts": "tsc --noEmit --skipLibCheck",
     "lint:tslint": "tslint -e 'node_modules/**' --project tsconfig.json",
@@ -38,15 +40,13 @@
   "jest": {
     "moduleFileExtensions": [
       "ts",
-      "tsx",
       "js"
     ],
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(.spec)\\.(ts|tsx)$",
+    "testRegex": ".*\\.spec\\.ts$",
     "testPathIgnorePatterns": [
-      "\\.snap$",
       "<rootDir>/node_modules/"
     ]
   }

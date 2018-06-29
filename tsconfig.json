@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
     // Input
-    "lib": ["es2017"],
+    "lib": ["es5", "es2015", "es2017"],
     "module": "commonjs",
     "moduleResolution": "node",
     "rootDir": "src",
 
     // Output
     "sourceMap": true,
-    "target": "es6",
+    "target": "es5",
     "outDir": "dist",
+    "declarationDir": "dist",
 
     // Config
     "allowJs": false,
     "strictNullChecks": true,
     "declaration": true,
-    "pretty": true
+    "pretty": true,
+    "types": ["node"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "dangerfile.ts"],
   "exclude": ["dangerfile.ts", "node_modules", "dist"]

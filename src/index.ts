@@ -29,11 +29,11 @@ export function linkIssue(options: Options): void {
 
 const createLink = (href: string, text: string): string => `<a href="${href}">${text}</a>`;
 
-const extractIssues = (text: string, key: string) => {
+const extractIssues = (text: string, key: string): string[] => {
   const regex = new RegExp(`(${key}-[0-9]+)`, 'g');
 
   let match;
-  const issues = [];
+  const issues: string[] = [];
 
   // tslint:disable-next-line:no-conditional-assignment
   while ((match = regex.exec(text)) != null) {
