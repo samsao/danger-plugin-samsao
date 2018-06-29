@@ -38,15 +38,13 @@
   "jest": {
     "moduleFileExtensions": [
       "ts",
-      "tsx",
       "js"
     ],
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "(.spec)\\.(ts|tsx)$",
+    "testRegex": "(.spec)\\.(ts)$",
     "testPathIgnorePatterns": [
-      "\\.snap$",
       "<rootDir>/node_modules/"
     ]
   }
