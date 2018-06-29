@@ -8,6 +8,7 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
+  "eslint.enable": false,
 
   "tslint.enable": true,
   "tslint.packageManager": "yarn",

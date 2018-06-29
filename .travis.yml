@@ -17,5 +17,6 @@ node_js:
   - node
 
 script:
+  - mkdir ./reports
+  - yarn test:ci
   - yarn danger ci
-  - yarn lint

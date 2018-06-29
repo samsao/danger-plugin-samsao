@@ -1,7 +1,4 @@
-import { linkIssue } from './src';
+import * as path from 'path';
+import { jest } from './src/jest';
 
-linkIssue({
-  url: 'https://samsao.atlassian.net/browse/',
-  key: 'AT',
-  emoji: ':link:',
-});
+jest({ resultsPath: path.resolve(__dirname, 'reports/jest.json') });
