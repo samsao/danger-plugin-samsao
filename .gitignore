@@ -1,10 +1,21 @@
-node_modules
-coverage
-.nyc_output
-.DS_Store
-*.log
-.vscode
-dist
-compiled
-.awcache
+# Autoenv
 \.env
+
+# Build
+build/
+dist/
+
+# Coverage
+/coverage
+
+# Reports
+reports/
+
+# System Files
+*.orig
+.DS_Store
+Thumbs.db
+
+# Yarn
+yarn-error.log
+node_modules/
